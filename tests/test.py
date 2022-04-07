@@ -53,9 +53,13 @@ def test_get_health():
     assert "status" in data
     assert data["status"] == 1
 
+
 def test_get_health():
     response = requests.get(
         url=f"{API_URL}/bye"
     )
-    assert response.status_code == 500, response.content
+    assert response.status_code == 200, response.content
     data = response.json()
+
+    assert "bye" in data
+    assert data["bye"] == "bye"
