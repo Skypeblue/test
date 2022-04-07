@@ -43,3 +43,10 @@ def post_mon_post(nombre_entier: int):
     return {
         "nombre_entier": nombre_entier
     }
+
+
+@api.get('/health')
+def get_health():
+    return {
+        "status": 1
+    }
