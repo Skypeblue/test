@@ -41,3 +41,14 @@ def test_post_mon_post():
 
     assert "nombre_entier" in data
     assert data["nombre_entier"] == 42
+
+
+def test_get_health():
+    response = requests.get(
+        url=f"{API_URL}/health"
+    )
+    assert response.status_code == 200, response.content
+    data = response.json()
+
+    assert "status" in data
+    assert data["status"] == 1
