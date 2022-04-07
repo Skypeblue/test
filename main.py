@@ -50,3 +50,10 @@ def get_health():
     return {
         "status": 1
     }
+
+
+@api.get('/bye')
+def get_bye():
+    return {
+        "bye": "bye"
+    }
