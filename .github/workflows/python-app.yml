@@ -24,4 +24,4 @@ jobs:
       run : python3 -m uvicorn main:api &
     - name: Test with pytest
       run: |
-        cd ./tests && python3 -m pytest tests.py
+        cd ./tests && python3 -m pytest test.py
